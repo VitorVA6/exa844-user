@@ -7,7 +7,14 @@ require('dotenv').config()
 
 connectDb()
 
-app.use(cors());
+const allowedOrigins = [
+    'http://[::1]:5173',
+  ];
+
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true
+  }));
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
