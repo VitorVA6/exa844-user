@@ -9,6 +9,7 @@ connectDb()
 
 const allowedOrigins = [
     'http://[::1]:5173',
+    'https://exa844-user.vercel.app'
   ];
 
 app.use(cors({
